@@ -2,7 +2,7 @@
 -⁠una que muestre una tarea DONE
  -⁠una que cree una nueva tarea DONE
 - ⁠Una que modifique una tarea
-- ⁠una que borre una tarea
+- ⁠una que borre una tarea DONE
 */
 
 //funcion que agrega una tarea//
@@ -17,17 +17,17 @@ addNewTask("enviar link de pago");
 addNewTask("presupuestar");
 addNewTask("pedir pasaportes");
 
-//funcion que muestra la lista
+//funcion que muestra la lista//
 
-/*function showList() {
+function showList() {
   console.log(TaskList);
 }
-showList();*/
+showList();
 
-/*funcion que muestra una tarea
+//funcion que muestra una tarea//
 TaskList.forEach(function (tareas, indice) {
   console.log(`${indice} : ${tareas} `);
-});*/
+});
 
 //borra tarea//
 
