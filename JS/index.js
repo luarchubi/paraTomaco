@@ -15,15 +15,28 @@ function addNewTask(tarea) {
 addNewTask("llamar cliente");
 addNewTask("enviar link de pago");
 addNewTask("presupuestar");
+addNewTask("pedir pasaportes");
 
 //funcion que muestra la lista
 
-function showList() {
+/*function showList() {
   console.log(TaskList);
 }
-showList();
+showList();*/
 
-//funcion que muestra una tarea
+/*funcion que muestra una tarea
 TaskList.forEach(function (tareas, indice) {
   console.log(`${indice} : ${tareas} `);
-});
+});*/
+
+//borra tarea//
+
+deletedTask("presupuestar");
+
+function deleteTask(a) {
+  let posicionTask = TaskList.indexOf(a);
+  console.log(posicionTask, a);
+  TaskList.splice(posicionTask, 1);
+  console.log(TaskList);
+}
+deleteTask("pedir pasaportes");
