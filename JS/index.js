@@ -31,11 +31,8 @@ TaskList.forEach(function (tareas, indice) {
 
 //borra tarea//
 
-deletedTask("presupuestar");
-
 function deleteTask(a) {
   let posicionTask = TaskList.indexOf(a);
-  console.log(posicionTask, a);
   TaskList.splice(posicionTask, 1);
   console.log(TaskList);
 }
