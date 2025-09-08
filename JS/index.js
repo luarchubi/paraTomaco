@@ -1,56 +1,55 @@
-/*- una que muestre toda la lista DONE
--⁠una que muestre una tarea DONE
- -⁠una que cree una nueva tarea DONE
+/*- una que muestre toda la lista 
+-⁠una que cree una nueva tarea 
 - ⁠Una que modifique una tarea
-- ⁠una que borre una tarea DONE
+- ⁠una que borre una tarea 
+-⁠una que muestre una tarea 
 */
 
 //funcion que agrega una tarea//
-let TaskList = [];
+let taskList = [];
 function addNewTask(tarea) {
-  TaskList.push(tarea);
-  console.log("se ha agregado " + tarea + " a la lista");
+  taskList.push(tarea);
+  let position = taskList.indexOf(tarea);
+  console.log(taskList);
+  return position;
 }
-
 addNewTask("llamar cliente");
 addNewTask("enviar link de pago");
 addNewTask("presupuestar");
 addNewTask("pedir pasaportes");
 
 //funcion que muestra la lista
-
 function showList() {
-  console.log(TaskList);
+  let tamanoArray = taskList.length;
+  if (tamanoArray > 0) {
+    for (let i = 0; i < taskList.length - 1; i++) {
+      return taskList[i];
+    }
+  } else {
+    alert("no hay actividades en la lista");
+  }
 }
 showList();
 
-//funcion que borra una tarea
-
-function deleteTask(a) {
-  let posicionTask = TaskList.indexOf(a);
-  TaskList.splice(posicionTask, 1);
-  console.log(TaskList);
-}
-deleteTask("pedir pasaportes");
-
-function position(a) {
-  let posicionTask = TaskList.indexOf(a);
-  console.log(posicionTask);
+function position(tarea) {
+  let posicionTask = taskList.indexOf(tarea);
+  return posicionTask;
 }
 position("llamar cliente");
 
-//funcion que muestra una tarea
+//FUNCION QUE BORRA UNA TAREA
+
+function deleteTask(tarea) {
+  let posicionTask = taskList.indexOf(tarea);
+  taskList.splice(posicionTask, 1);
+  return true;
+}
+deleteTask("pedir pasaportes");
+
+//FUNCION QUE MUESTRA UNA TAREA
 function showTask(position) {
-  console.log(position);
+  let posicionTask = taskList.indexOf(position);
+  return posicionTask;
 }
 
 showTask("llamar cliente");
-
-//funcion modifica tarea
-
-function modify(a) {
-  let posicionTask = TaskList.indexOf(a);
-  let modifiedTask = TaskList.slice(posicionTask, 1);
-  console.log(modifiedTask);
-}
-modify("llamar cliente");

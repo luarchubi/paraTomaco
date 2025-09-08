@@ -37,3 +37,11 @@ nav ul li {
   color: black;
   font-family: "Poppins", sans-serif;
 }
+
+button {
+  background-color: brown;
+  color: black;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 20px;
+}
